@@ -1,0 +1,10 @@
+alias la='ls -A'
+
+alias gs='git status'
+alias gcm='git checkout master'
+alias gd='git diff'
+alias gpr='git pull --rebase'
+
+alias sai='sudo apt-get install'
+
+function chrome() { command google-chrome "$@" & }

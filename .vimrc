@@ -28,6 +28,8 @@ nnoremap <M-right> :vertical resize +5<cr>
 " ctrlp
 map <C-S-r> <C-p>
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_regexp = 1
 
 " ack
 nmap <C-h> <Esc>:Ack!

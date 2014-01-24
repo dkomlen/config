@@ -9,6 +9,7 @@ set smarttab
 set t_Co=256
 set foldmethod=indent
 set tags=./tags,tags;$HOME
+set hlsearch
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -45,6 +46,7 @@ imap <F9> <Esc><F9>
 " edit shortcuts
 
 nmap , :
+imap ii <Esc>
 
 nmap <C-a> ggVG
 vnoremap <C-c> "+y

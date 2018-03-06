@@ -25,6 +25,8 @@ filetype plugin indent on    " required
 
 " ----------------------------------------
 
+syntax on
+
 set t_Co=256
 colorscheme zenburn
 

@@ -5,6 +5,7 @@ alias ..='cd ..'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 alias sai='sudo apt-get install'
 alias ska='sudo killall'
+alias disk-usage="sudo du -h / | grep '[0-9\,]\+G'"
 
 # git
 alias gs='git status'

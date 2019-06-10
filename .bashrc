@@ -3,7 +3,7 @@ alias la='ls -A'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
-alias sai='sudo apt-get install'
+alias sai='sudo apt install'
 alias ska='sudo killall'
 alias disk-usage="sudo du -h / | grep '[0-9\,]\+G'"
 
@@ -52,4 +52,7 @@ export PS1='\[`EXT_COLOR 187`\]\u@\h\[\033[00m\]:\[`EXT_COLOR 174`\]\W\[`EXT_COL
 # startup
 stty -ixon
 shopt -s autocd
+
+# SSH
+# eval `keychain --quiet --agents ssh --eval id_rsa`
 

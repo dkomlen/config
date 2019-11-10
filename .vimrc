@@ -12,8 +12,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ScrollColors'
-Plugin 'jnurmine/zenburn'
-Plugin 'flazz/vim-colorschemes'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -27,8 +25,20 @@ filetype plugin indent on    " required
 
 syntax on
 
+" ---------------------------------------
+
 set t_Co=256
-colorscheme zenburn
+
+" zenburn color theme
+"
+" Plugin 'jnurmine/zenburn'
+" Plugin 'flazz/vim-colorschemes'
+" colorscheme zenburn
+
+" nord color theme
+"
+Plugin 'arcticicestudio/nord-vim'
+colorscheme nord
 
 " ----------------------------------------
 set splitbelow

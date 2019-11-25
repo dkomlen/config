@@ -15,6 +15,8 @@ alias gpr='git pull --rebase'
 
 source ~/.git-prompt.sh
 
+fb-push() { git commit -am "$1"; gcm; gpr; git checkout -; git push -f; }
+
 # functions
 extract() {
     if [ -f $1 ] ; then

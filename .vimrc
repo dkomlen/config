@@ -1,7 +1,8 @@
-
 " ----------------------------------------
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+" Plugins -------------------------------
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,6 +18,9 @@ Plugin 'ScrollColors'
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'kien/ctrlp.vim'
 
+" Language support
+Plugin 'sheerun/vim-polyglot'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -25,7 +29,7 @@ filetype plugin indent on    " required
 
 syntax on
 
-" ---------------------------------------
+" Color schemes ---------------------------------------
 
 set t_Co=256
 

@@ -1,3 +1,10 @@
+Copy configs:
+```
+cp .bashrc ~/
+cp .vimrc ~/
+cp .git-prompt.sh ~/
+```
+
 Configure vim:
 ```
 cp .vimrc ~/.vimrc

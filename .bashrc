@@ -58,3 +58,48 @@ shopt -s autocd
 # SSH
 # eval `keychain --quiet --agents ssh --eval id_rsa`
 
+# @description: Bootstraps a git repository for work.
+#
+# @param {string} repo_name - The name of the repository in ~/repo.
+# @param {string} branch_name - The name of the branch to check out.
+#
+# @example
+#   workon my-project feature-branch
+#
+workon() {
+  local repo_name=$1
+  local branch_name=$2
+  local repo_dir="$HOME/$repo_name"
+
+  # Validate arguments
+  if [ -z "$repo_name" ] || [ -z "$branch_name" ]; then
+    echo "Usage: workon <repo-name> <branch-name>"
+    return 1
+  fi
+
+  # Check if directory exists
+  if [ ! -d "$repo_dir" ]; then
+    echo "Error: Directory does not exist: $repo_dir"
+    return 1
+  fi
+
+  cd "$repo_dir"
+
+  # Check git status
+  if ! git diff-index --quiet HEAD --; then
+    read -p "You have uncommitted changes. Stash them? (y/n) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      git stash
+    else
+      echo "Aborting."
+      return 1
+    fi
+  fi
+
+  echo "Checking out main and rebasing with remote..."
+  git checkout main && git pull --rebase origin main
+
+  echo "Checking out branch '$branch_name'..."
+  git checkout -b "$branch_name"
+}

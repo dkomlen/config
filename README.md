@@ -16,7 +16,7 @@ vim
 Nord theme:
 - https://www.nordtheme.com
 
-Git use keychain:
+Use keychain for git:
 - In `~/.ssh/config` add
 ```
 Host *
